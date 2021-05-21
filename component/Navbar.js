@@ -28,12 +28,25 @@ const Navbar = () => {
                menu      
           </a>
 
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                   <Link href="/profile">
-                       <a className="dropdown-item">Profile</a>
-                   </Link>
-                    <button className="dropdown-item" onClick={handleLogout}>Logout</button>
-              </div> 
+             {
+                auth.role=='teacher' ?
+                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <Link href="/profile">
+                    <a className="dropdown-item">Profile</a>
+                </Link>
+                <Link href="/plomapping">
+                   <a className="dropdown-item">Plo mappping</a>
+                </Link>
+
+                 <button className="dropdown-item" onClick={handleLogout}>Logout</button>
+           </div> 
+           :   <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <Link href="/profile">
+                     <a className="dropdown-item">Profile</a>
+               </Link>
+               <button className="dropdown-item" onClick={handleLogout}>Logout</button>
+               </div> 
+             }
           </li>
       )
   }

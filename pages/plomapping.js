@@ -27,15 +27,11 @@ const Plomapping = () => {
         
          dispatch({ type: 'NOTIFY', payload: {loading: true}})
 
-        //  const res = await getData('auth/studentData' , auth.token)
-
-
-
-         const post = await postData('postplodata' , ploMappingData , token)
+         const res = await postData('postplodata' , ploMappingData)
  
-        if (res.err) return dispatch({ type: 'NOTIFY', payload: {error: post.err}});
+        if (res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err}});
  
-        return dispatch({ type: 'NOTIFY', payload: {success: post.msg}});
+        return dispatch({ type: 'NOTIFY', payload: {success: res.msg}});
 
     }
 
