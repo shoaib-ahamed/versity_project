@@ -16,12 +16,8 @@ export default async (req, res) => {
 const login = async (req, res) => {
     try{
         const { id } = req.body
-
-        console.log(id)
         
         const student = await Student.findOne({  id : id })
-
-        console.log(student)
         
         if(!student) return res.status(400).json({err: 'This Student does not exist.'})
 

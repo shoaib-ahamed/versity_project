@@ -103,7 +103,7 @@ const handleSubmit = async e => {
                 <button type="submit" className="btn btn-dark w-100">Submit</button>
         </form>
         :  
-        <Result  course_id={course_id} id={id} quiz={quiz} mid={mid} final={final} attendance_mark={attendance_mark} project_mark={project_mark} assignment_mark={assignment_mark} grade={grade} clo={clo} />
+        <Result/>
         
         }
         </div>

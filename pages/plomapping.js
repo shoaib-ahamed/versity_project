@@ -57,7 +57,7 @@ const Plomapping = () => {
 
                     <label className="form-check-label clo" htmlFor="flexSwitchCheckDefault" >CLO1</label>
                     <br></br>
-                    <input type="plo" className="form-control"  placeholder="enter yes" name='clo1' value={clo1} onChange={handleChange}/>
+                    <input type="plo" className="form-control"   name='clo1' value={clo1} onChange={handleChange}/>
                 </div>
 
                 <div className="form-check form-switch">

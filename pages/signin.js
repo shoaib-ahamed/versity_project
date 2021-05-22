@@ -31,7 +31,6 @@ function Signin() {
             if (res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err}});
             dispatch({ type: 'NOTIFY', payload: {success: res.msg}});
 
-            console.log(res)
 
             router.push('profile')
 
